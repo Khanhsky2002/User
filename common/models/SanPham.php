@@ -28,7 +28,7 @@ class SanPham extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['TenSanPham', 'GiaBan', 'LoaiSanPham'], 'required'],
+            [['TenSanPham', 'GiaBan', 'LoaiSanPham'], 'required','message'=>'Không được để trống'],
             [['GiaBan', 'LoaiSanPham'], 'integer'],
             [['TenSanPham'], 'string', 'max' => 255],
         ];
@@ -40,10 +40,10 @@ class SanPham extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'SanPhamID' => 'San Pham ID',
-            'TenSanPham' => 'Ten San Pham',
-            'GiaBan' => 'Gia Ban',
-            'LoaiSanPham' => 'Loai San Pham',
+            'SanPhamID' => 'ID',
+            'TenSanPham' => 'Tên sản phẩm',
+            'GiaBan' => 'Giá bán',
+            'LoaiSanPham' => 'Loại sản phẩm',
         ];
     }
 }

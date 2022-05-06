@@ -11,10 +11,10 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    //'modules' => [],
+//    'modules' => [],
     'modules' => [
         'gridview' =>  [
-            'class' => \kartik\grid\Module::class, // 'exportEncryptSalt' => 'tG85vd1',
+            'class' => \kartik\grid\Module::class,
         ]
     ],
     'components' => [
